@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --ff-secondary: 'Inconsolata', monospace;
+    --ff-primary: 'Space Mono', monospace;
+    --ff-footer: 'Montserrat', sans-serif;
+
+    --gray: #333333;
+    --gray-light: #BDBDBD;
+    --white: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex-grow: 2;
+}
+.main-header {
+    padding: 20px 24px;
+}
+
+.main-header__title{
+    font-family: var(--ff-secondary);
+    font-size: 24px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--ff-primary);
+    row-gap: 60px;
+    margin-top: 64px;
+    margin-bottom: 114px;
+}
+.main-content__image {
+    width: 286px;
+    height: auto;
+    object-fit: contain;
+}
+.main-content__text-container {
+    width: 350px;
+}
+.text-container__title {
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: -0.035em;
+}
+.text-container__message {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.035em;
+}
+.text-container__link {
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    background-color: var(--gray);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    padding: 24px 43px;
+    margin-top: 66px;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+}
+
+.main-footer__text{
+    text-align: center;
+    font-family: var(--ff-footer);
+    color: var(--gray-light);
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .main-header {
+        padding: 40px 77px;
+    }
+    .main-content {
+        flex-direction: row;
+        column-gap: 118px;
+        margin-top: 200px;
+        margin-bottom: 308px;
+    }
+    .main-content__image {
+        width: 540px;
+    }
+    .main-content__text-container {
+        width: 586px;
+    }
+    .text-container__title {
+        font-size: 64px;
+        line-height: 95px;
+        letter-spacing: -0.035em;
+    }
+    .text-container__message {
+        font-size: 24px;
+        margin-top: 36px;
+        line-height: 36px;
+        letter-spacing: -0.035em;
+    }
+    .text-container__link {
+        margin-top: 64px;
+    }
+}
