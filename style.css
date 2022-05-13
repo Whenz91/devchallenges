@@ -10,6 +10,7 @@ body {
     font-size: 16px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 a {
     text-decoration: none;
@@ -20,11 +21,62 @@ a {
 .main-nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 16px 32px;
 }
+.mobile-nav-button {
+    background-color: transparent;
+    border: none;
+    transition: transform .4s ease-in-out;
+    cursor: pointer;
+}
+.mobile-nav-button__line {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: #333;
+    transition: all .4s ease-in-out;
+    pointer-events: none;
+}
+.mobile-nav-button__line:not(:last-child) {
+    margin-bottom: 7px;
+}
+.mobile-nav-button.active {
+    transition-delay: .8s;
+    transform: rotate(45deg);
+}
+.mobile-nav-button.active > .mobile-nav-button__line:nth-child(2) {
+    width: 0;
+}
+.mobile-nav-button.active > .mobile-nav-button__line:nth-child(1),
+.mobile-nav-button.active > .mobile-nav-button__line:nth-child(3) {
+    transition-delay: .4s;
+}
+.mobile-nav-button.active > .mobile-nav-button__line:nth-child(1) {
+    transform: translateY(9px);
+}
+.mobile-nav-button.active > .mobile-nav-button__line:nth-child(3) {
+    transform: translateY(-9px) rotate(90deg);
+}
+
 .link-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffff;
+    padding: 50px 20px 15px;
+    width: 50%;
+    height: 100%;
+    transform: translateX(-10000px);
+    transition: transform .4s ease-in-out;
+}
+.link-wrapper.active {
+    transform: translateX(0);
+}
+.link-wrapper__item {
+    margin-bottom: 16px;
 }
 
 main {
@@ -47,4 +99,21 @@ footer {
 footer a {
     color: #ffff;
     margin-right: 16px;
+}
+
+@media  screen and (min-width: 1024px) {
+    .mobile-nav-button {
+        display: none;
+    }
+    .link-wrapper {
+        flex-direction: row;
+        position: relative;
+        padding: 0;
+        width: max-content;
+        transform: translateX(0);
+    }
+    .link-wrapper__item {
+        margin-bottom: 0;
+        margin-right: 16px;
+    }
 }

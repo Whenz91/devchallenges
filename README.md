@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{All Responsive Web Developer challenges}</h1>
+<h1 align="center">All Responsive Web Developer challenges</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://{whenz91.github.io/devchallenges}">
+    <a href="https://whenz91.github.io/devchallenges">
       Demo
     </a>
     <span> | </span>
@@ -58,6 +58,6 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## Contact
 
-- Website [mikozoltan.hu](https://{mikozoltan.hu})
-- GitHub [@Whenz91](https://{github.com/whenz91})
-- Twitter [@zii_when](https://{twitter.com/zii_when})
+- Website [mikozoltan.hu](https://mikozoltan.hu)
+- GitHub [@Whenz91](https://github.com/whenz91)
+- Twitter [@zii_when](https://twitter.com/zii_when)
