@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
@@ -47,16 +48,18 @@
             <div class="hero__text-content">
                 <h1 class="text-content__title">Modern interior</h1>
                 <p class="text-content__lead">A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
-                <a href="" class="text-content__link">Read more</a>
+                <a href="" class="text-content__link">Read more <span class="material-icons-outlined">trending_flat</span></a>
             </div>
 
             <figure class="hero__image-figure">
-                <img src="images/photo1.png" alt="House Interior">
+                <img src="images/photo1.png" alt="House Interior" class="hero__image-figure__image">
                 <figcaption class="image-figcaption">
                     <div class="image-figcaption__author">
                         <img src="images/photo2.png" alt="Aliza Webber" class="author__image">
-                        <h5 class="author__name">Aliza Webber</h5>
-                        <p class="author__position">Interior designer</p>
+                        <div>
+                            <h5 class="author__name">Aliza Webber</h5>
+                            <p class="author__position">Interior designer</p>
+                        </div>
                     </div>
                    <h3 class="image-figcaption__title">Designed in 2020 by Aliza Webber</h3>
                 </figcaption>
@@ -64,5 +67,9 @@
             
         </section>
     </main>
+
+    <footer class="main-footer">
+        <p class="main-footer__text">created by <b>Whenz91</b> - devChallenges.io</p>
+    </footer>
 </body>
 </html>
