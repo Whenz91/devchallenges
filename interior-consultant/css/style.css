@@ -87,10 +87,6 @@ a {
     min-height: 100vh;
     z-index: 100;
 }
-body:is(.main-nav__link-list.active) {
-    max-height: 100vh;
-    overflow-y: hidden;
-}
 .link-list__item {
     margin-bottom: 32px;
 }
