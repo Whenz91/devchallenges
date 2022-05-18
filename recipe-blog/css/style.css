@@ -109,10 +109,6 @@ body {
     color: var(--orange);
 }
 
-
-.recipe__main__content {
-
-}
 .recipe__main__content__subtitle {
     font-family: var(--ff-playfair);
     font-weight: 700;
