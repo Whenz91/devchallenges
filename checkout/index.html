@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+    <link rel="icon" href="../devchallenges.png" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/main.js" defer></script>
+
+    <title>Checkout page challenge</title>
+  </head>
+  <body>
+
+    <header class="header">
+        <h1 class="header__title">Checkout</h1>
+    </header>
+
+    <main>
+        <section class="cart">
+            <ul class="cart__list">
+
+                <li class="cart__list__item">
+
+                    <img src="images/photo1.png" alt="Vintage Backbag" class="list-item__image">
+                    
+                    <div class="list-item__body">
+                        <h4 class="list-item__body__title">Vintage Backbag</h4>
+                        <p class="list-item__body__price">
+                            <span class="list-item__body__price--new">$54.99</span>
+                            <span class="list-item__body__price--old">$94.99</span>
+                        </p>
+
+                        <div class="list-item__body__input-box">
+                            <button class="list-item__body__input-box__button" data-increase="">-</button>
+                            <input class="list-item__body__input-box__input" type="number" value="1">
+                            <button class="list-item__body__input-box__button" data-increase="true">+</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="cart__list__item">
+
+                    <img src="images/photo2.png" alt="Levi Shoes" class="list-item__image">
+
+                    <div class="list-item__body">
+                        <h4 class="list-item__body__title">Levi Shoes</h4>
+                        <p class="list-item__body__price">
+                            <span class="list-item__body__price--new">$74.99</span>
+                            <span class="list-item__body__price--old">$124.99</span>
+                        </p>
+
+                        <div class="list-item__body__input-box">
+                            <button class="list-item__body__input-box__button" data-increase="">-</button>
+                            <input class="list-item__body__input-box__input" type="number" value="1">
+                            <button class="list-item__body__input-box__button" data-increase="true">+</button>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+           <table class="cart-summary-table">
+               <tbody>
+                   <tr>
+                       <td>Shipping</td>
+                       <td>$19</td>
+                   </tr>
+                   <tr>
+                       <td>Total</td>
+                       <td>$148.98</td>
+                   </tr>
+               </tbody>
+           </table>
+
+        </section>
+
+       <form id="orderForm" class="order-form">
+
+           <fieldset class="order-form__fieldset">
+               <legend class="order-form__legend">Contact infomation</legend>
+
+               <div class="order-form__group">
+                   <label for="email">E-mail</label>
+                   <div class="input-with-icon">
+                       <span class="material-icons">email</span>
+                       <input type="email" id="email" placeholder="Enter your email..." required>
+                       <span class="material-icons validation valid">check_circle</span>
+                       <span class="material-icons validation invalid">error</span>
+                   </div>
+               </div>
+
+               <div class="order-form__group">
+                   <label for="phone">Phone</label>
+                   <div class="input-with-icon">
+                       <span class="material-icons">phone</span>
+                       <input type="tel" id="phone" placeholder="Enter your phone..." pattern="[0-9]{2}-[0-9]{2}-[0-9]{7}" required>
+                       <span class="material-icons validation valid">check_circle</span>
+                       <span class="material-icons validation invalid">error</span>
+                   </div>
+               </div>
+           </fieldset>
+
+           <fieldset class="order-form__fieldset grid">
+               <legend class="order-form__legend">Shipping address</legend>
+
+               <div class="order-form__group grid-item--full-width">
+                   <label for="name">Full name</label>
+                   <div class="input-with-icon">
+                        <span class="material-icons">account_circle</span>
+                        <input type="text" id="name" value="Rodney Cotton" placeholder="Enter your fullname..." required>
+                        <span class="material-icons validation valid">check_circle</span>
+                        <span class="material-icons validation invalid">error</span>
+                   </div>
+               </div>
+
+               <div class="order-form__group grid-item--full-width">
+                   <label for="address">Address</label>
+                   <div class="input-with-icon">
+                       <span class="material-icons">home</span>
+                       <input type="text" id="address" placeholder="Your address.." required>
+                       <span class="material-icons validation valid">check_circle</span>
+                       <span class="material-icons validation invalid">error</span>
+                   </div>
+               </div>
+
+               <div class="order-form__group grid-item--full-width">
+                   <label for="city">City</label>
+                   <div class="input-with-icon">
+                    <span class="material-icons">apartment</span>
+                       <input type="text" id="city" placeholder="Your city.." required>
+                       <span class="material-icons validation valid">check_circle</span>
+                       <span class="material-icons validation invalid">error</span>
+                   </div>
+               </div>
+
+               <div class="order-form__group">
+                   <label for="country">Country</label>
+                   <div class="input-with-icon">
+                        <span class="material-icons">apartment</span>
+                        <select name="country" id="country" required>
+                            <option value="" disabled selected hidden>Your country..</option>
+                            <option value="England">England</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="French">French</option>
+                            <option value="Germany">Germany</option>
+                        </select>
+                        <span class="material-icons validation valid">check_circle</span>
+                        <span class="material-icons validation invalid">error</span>
+                   </div>
+               </div>
+
+               <div class="order-form__group">
+                   <label for="postcode">Postal code</label>
+                   <div class="input-with-icon">
+                    <span class="material-icons">markunread_mailbox</span>
+                    <input type="text" id="postcode" placeholder="Your postal code.." required>
+                    <span class="material-icons validation valid">check_circle</span>
+                    <span class="material-icons validation invalid">error</span>
+                   </div>
+               </div>
+
+            </fieldset>
+            
+            <div class="order-form__group checkbox-group">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Save this information for next time</label>
+            </div>
+
+            <button type="submit" class="order-form__submit-btn">Continue</button>
+       </form>
+
+    </main>
+   
+
+    <footer class="main-footer">
+      <p class="main-footer__text">created by <b>Whenz91</b> - devChallenges.io</p>
+    </footer>
+
+  </body>
+</html>
