@@ -1,0 +1,61 @@
+main {
+    display: grid;
+    width: 90%;
+    margin: 25px auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "about about"
+    "skills blog"
+    "hobbi blog"
+    "hobbi experience"
+    "filter filter"
+    "projects projects"
+    ". pagination"
+    ;
+    column-gap: 39px;
+    row-gap: 30px;
+    align-items: start;
+    
+}
+#about {
+    grid-area: about;
+}
+#skills {
+    grid-area: skills;
+}
+#blog {
+    grid-area: blog;
+    align-self: stretch;
+}
+#hobbi {
+    grid-area: hobbi;
+}
+#experience {
+    grid-area: experience;
+}
+#filter {
+    grid-area: filter;
+}
+#projects {
+    grid-area: projects;
+}
+#pagination {
+    grid-area: pagination;
+    justify-self: end;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "about"
+        "skills"
+        "blog"
+        "experience"
+        "hobbi"
+        "filter"
+        "projects"
+        "pagination"
+        ;
+    }
+}
